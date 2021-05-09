@@ -210,6 +210,7 @@ pairs.panels(USStates[-1,], # getting univariate and bivariate summaries
              hist.col = "yellow", #histogram color
              smooth = FALSE, density = FALSE, ellipses = FALSE)
 ```
+![image](https://user-images.githubusercontent.com/83299916/117582488-d5fc6300-b0c7-11eb-86ed-21e13f904205.png)
 
 ![](Project-2_files/figure-gfm/matrix-1.png)<!-- -->
 
@@ -247,6 +248,7 @@ USStates %>%
   labs(title="Mean Values Across UrbPopQuartile Conditions")+ #title
   theme(legend.position = "none")
 ```
+![image](https://user-images.githubusercontent.com/83299916/117582500-df85cb00-b0c7-11eb-98ab-66b659d8bddb.png)
 
 ![](Project-2_files/figure-gfm/MANOVA-1.png)<!-- -->
 
@@ -268,6 +270,7 @@ ggplot(USStates, aes(x = UrbanPop, y = ArrestNumber)) +
   facet_wrap(~UrbPopQuartile) + #splitting by UrbPopQuartile conditions
   labs(title="Arrest Numbers Between UrbPopQuartile Conditions", x = "Percentage of Population that is Urban (%)", y = "Arrest Number (per 100,000 residents)") #titles
 ```
+![image](https://user-images.githubusercontent.com/83299916/117582507-e7456f80-b0c7-11eb-90d4-fbfa4797a44b.png)
 
 ![](Project-2_files/figure-gfm/randomization-1.png)<!-- -->
 
@@ -288,6 +291,7 @@ ggplot(USStates, aes(x = DisposableIncome, y = ArrestNumber))+ #plot and setting
   geom_point(aes(color=ArrestType)) + #mean arrest number, colored by UrbPopQuartile
   labs(title = "Disposable Income and Arrest Number by Arrest Types", x = "Disposable Income ($)", y = "Number of Arrests (per 100,000 residents)") #title and axes labels
 ```
+![image](https://user-images.githubusercontent.com/83299916/117582513-eb718d00-b0c7-11eb-9179-e0b5567905c8.png)
 
 ![](Project-2_files/figure-gfm/linear-1.png)<!-- -->
 
@@ -303,6 +307,7 @@ ggplot(USStates, aes(AnnualRent, AnnualIncome)) + #plot and setting x and y aest
   geom_point(aes(color=UrbPopQuartile)) + #coloring points by UrbPopQuartile
   labs(title = "Annual Rent and Income by UrbPopQuartile", x = "Annual Rent ($)", y = "Annual Income ($)") #title and axes labels
 ```
+![image](https://user-images.githubusercontent.com/83299916/117582515-ef9daa80-b0c7-11eb-9141-19c6e699cc4e.png)
 
 ![](Project-2_files/figure-gfm/logistic-1.png)<!-- -->
 
@@ -598,6 +603,7 @@ ggplot(USStates, aes(ArrestNumber,fill=UrbPopQuartile)) + #setting the variables
   labs(title = "Distribution of Arrest Numbers for Each Urban Population Quartile Condition", x = "Arrest Number (per 100,000 residents)", y = "Count") + #titles
   scale_fill_manual("Percentage of Population that is Urban", values = c("50% or less" = "#A180F5", "greater than 50%" = "#FCD2F6"))  #colors for UrbPopQuartile
 ```
+![image](https://user-images.githubusercontent.com/83299916/117582528-ff1cf380-b0c7-11eb-8fe8-90faa1607855.png)
 
 ![](Project-2_files/figure-gfm/manual-1.png)<!-- -->
 
@@ -651,6 +657,7 @@ for(i in 1:5000){
 #displaying the distribution of the mean differences with a vertical line that represents the true difference
 {hist(mean_diff, main="Distribution of the mean differences"); abline(v =1.132791, col="red")}
 ```
+![image](https://user-images.githubusercontent.com/83299916/117582531-05ab6b00-b0c8-11eb-9543-e56d34208871.png)
 
 ![](Project-2_files/figure-gfm/manual-2.png)<!-- -->
 
@@ -804,6 +811,8 @@ ggplot(USStates, aes(DisposableIncome_c,ArrestNumber)) + #creating the plot
 
     ## `geom_smooth()` using formula 'y ~ x'
 
+![image](https://user-images.githubusercontent.com/83299916/117582542-11972d00-b0c8-11eb-9560-2e39b0068e65.png)
+
 ![](Project-2_files/figure-gfm/unnamed-chunk-9-1.png)<!-- -->
 
 ``` r
@@ -882,6 +891,8 @@ USStates %>%   #confirming linear relationship of numerical predictor to respons
 ```
 
     ## `geom_smooth()` using formula 'y ~ x'
+
+![image](https://user-images.githubusercontent.com/83299916/117582548-1a87fe80-b0c8-11eb-862d-448fb21e35fc.png)
 
 ![](Project-2_files/figure-gfm/assumptions-1.png)<!-- -->
 
@@ -1228,6 +1239,7 @@ USStates %>%
   xlab("logit (log-odds)") + #axis title
   ylab("Density") #axis title
 ```
+![image](https://user-images.githubusercontent.com/83299916/117582563-2b387480-b0c8-11eb-95c4-20ec73e55e60.png)
 
 ![](Project-2_files/figure-gfm/plot%20of%20log%20odds-1.png)<!-- -->
 
@@ -1247,6 +1259,7 @@ ROCplot1 <- ggplot(USStates) +
   geom_roc(aes(d = y, m = prob), cutoffs.at = list(0.2, 0.3, 0.5))
 ROCplot1 #getting the ROC plot to be based on y values and probabilities along with 3 cutoffs
 ```
+![image](https://user-images.githubusercontent.com/83299916/117582570-325f8280-b0c8-11eb-92fc-82b5c1881ddc.png)
 
 ![](Project-2_files/figure-gfm/ROC%20curve-1.png)<!-- -->
 
