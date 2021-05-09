@@ -616,7 +616,7 @@ cor(USStates_num, use = "pairwise.complete.obs") %>%  #correlation function
   labs(title = "Correlation Heatmap for US States Dataset", x = "Variable 1", y = "Variable 2", aes(size=2)) + #title and axes labels
   theme(axis.text.x = element_text(angle = 90)) #vertically rotate x-axis variables so that they are not overlapping
 ```
-
+![image](https://user-images.githubusercontent.com/83299916/117582283-e3651d80-b0c6-11eb-9f09-f7f730e8bbeb.png)
 ![](Project-1_files/figure-gfm/unnamed-chunk-20-1.png)<!-- -->
 
 The correlation heatmap above shows that the two variables with the
@@ -635,6 +635,8 @@ ggplot(USStates, aes(AnnualRent, AnnualIncome)) + #plot and setting x and y aest
   labs(title = "Annual Rent and Income by Estimated Disposable Income", x = "Annual Rent (in USD)", y = "Annual Income (in USD)") #title and axes labels
 ```
 
+![image](https://user-images.githubusercontent.com/83299916/117582294-f2e46680-b0c6-11eb-842c-6ecab3a1bd47.png)
+
 ![](Project-1_files/figure-gfm/unnamed-chunk-21-1.png)<!-- -->
 
 This first graph displays the Annual Income against the Annual Rent,
@@ -651,6 +653,7 @@ ggplot(USStates, aes(x = ArrestType, y = ArrestNumber))+ #plot and setting x and
   scale_fill_manual("Percentage of Population that is Urban", values = c("between 25-50%" = "#632BF1", "greater than 50%, less than 75%" = "#A180F5", "greater than 75%" = "#DCD2F6")) + #colors for UrbPopQuartile
   labs(title = "Mean Arrest Number by Urban Population Quartiles", x = "Arrest Type", y = "Mean Number of Arrests (per 100,000)") #title and axes labels
 ```
+![image](https://user-images.githubusercontent.com/83299916/117582302-fe379200-b0c6-11eb-9db0-8fb717cdf916.png)
 
 ![](Project-1_files/figure-gfm/unnamed-chunk-22-1.png)<!-- -->
 
@@ -711,6 +714,8 @@ ggplot(perc_data, aes(x = PC, y = percent)) + #setting aesthetics for scree plot
     ## Warning: Removed 1 row(s) containing missing values (geom_path).
 
     ## Warning: Removed 1 rows containing missing values (geom_text).
+
+![image](https://user-images.githubusercontent.com/83299916/117582309-05f73680-b0c7-11eb-88cd-591b7496c987.png)
 
 ![](Project-1_files/figure-gfm/PCA-1.png)<!-- -->
 
@@ -800,6 +805,7 @@ ggplot(pca_data, aes(x = PC1, y = PC2, color = UrbanProportion)) + #setting PC1 
   geom_point() + #back into two-dimensional space 
   scale_color_manual("Proportion of Population that is Urban", values = c("between 25-50%" = "#0028FE", "greater than 50%, less than 75%" = "#AF92F8", "greater than 75%" = "#E09AE9")) #setting color gradient
 ```
+![image](https://user-images.githubusercontent.com/83299916/117582317-10b1cb80-b0c7-11eb-99d3-a399ac221efc.png)
 
 ![](Project-1_files/figure-gfm/unnamed-chunk-24-1.png)<!-- -->
 
@@ -845,6 +851,7 @@ ggplot(rotation_data) + #using rotated matrix
   ylim(-1., 1.) +
   coord_fixed()
 ```
+![image](https://user-images.githubusercontent.com/83299916/117582324-190a0680-b0c7-11eb-865d-5e780557bab9.png)
 
 ![](Project-1_files/figure-gfm/unnamed-chunk-26-1.png)<!-- -->
 
